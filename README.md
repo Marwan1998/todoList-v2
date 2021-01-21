@@ -1,5 +1,7 @@
 # todoList-v2
- with DB and online URL
+ todoList-v2 comes with DB and online URL
+
+built with nodejs.
 
 Notes to donwload and use this project:
 
