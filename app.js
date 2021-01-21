@@ -1,4 +1,5 @@
 //
+require("dotenv").config(); // mongoose connect,
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
@@ -11,7 +12,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://marwan-admin:MarwanClusterPass@firstcluster.hb6r8.mongodb.net/todoListDB?retryWrites=true&w=majority", {
+mongoose.connect(process.env.MONGOOSE_CONNECT_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
